@@ -108,7 +108,7 @@ for op in operators:
 # GeoJSONに置き換え
 for op in operators:
 
-    with open(os.path.join('data', 'gbfs', op, 'station_information.json'), 'r', encoding = 'utf-8') as f:
+    with open(os.path.join('..', 'data', 'gbfs', op, 'station_information.json'), 'r', encoding = 'utf-8') as f:
         d = json.load(f)
 
     # initialise GeoJSON data
