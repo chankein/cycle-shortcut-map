@@ -3,6 +3,7 @@
 import urllib.request
 import json
 import os
+from dotenv import load_dotenv
 
 # URLの設定
 dump_uri = "https://api.odpt.org/api/v4/"
@@ -24,8 +25,9 @@ file_names = [
 
 # アクセストークン
 # 各自で取得したものをここに保存
-token_odpt = 'your_access_token'
-token_challenge = 'your_access_token_challenge'
+load_dotenv()
+token_odpt = os.getenv('ODPT_TOKEN')
+token_challenge = os.getenv('ODPT_TOKEN_CHALLENGE')
 
 # 保存先
 path_odpt = os.path.join('..', 'data', 'odpt_api', 'open')

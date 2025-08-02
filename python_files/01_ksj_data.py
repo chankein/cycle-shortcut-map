@@ -4,7 +4,6 @@ import pandas as pd
 import geopandas as gpd
 import os
 import json
-import networkx as nx
 import shapely
 import re
 import pykakasi
